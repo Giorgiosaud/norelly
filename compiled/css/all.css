@@ -5912,7 +5912,8 @@ article.articulo.Clients {
     width: auto; }
 
 .menu-menu-superior-container {
-  position: absolute;
+  position: relative;
+  z-index: 100;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;

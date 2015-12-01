@@ -19,7 +19,8 @@ $color:#4a7484;
     }
 }
 .menu-menu-superior-container {
-    position: absolute;
+    position: relative;
+    z-index: 100;
     display:flex;
     width: 100%;
     z-index: 100;
