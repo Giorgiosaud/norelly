@@ -70,10 +70,10 @@ class Plugin{
 		}
 		else{
 			// var_dump($plugin);	
-			$this->name=$plugin['name'];
-			$this->source=get_stylesheet_directory().$plugin['source'];
-			
-			// $this->crearPluginDetallado($plugin);
+			// $this->name=$plugin['name'];
+			// $this->source=get_stylesheet_directory().$plugin['source'];
+			// $this->slug=$plugin['slug'];
+			$this->crearPluginDetallado($plugin);
 		}
 		// var_dump($this);
 	}
@@ -164,7 +164,8 @@ class Plugin{
 	public function crearPluginDetallado(array $plugin){
 		foreach ($plugin as $key => $value)
 		{
-			if($key=='source'){
+			$this->$key=$value;
+			if($key=='source'){	
 				$this->source=get_stylesheet_directory().$value;
 			}
 

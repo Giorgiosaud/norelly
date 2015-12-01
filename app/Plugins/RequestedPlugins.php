@@ -45,7 +45,7 @@ private $plugins=array();
 			$plugin->required()->force_activation();
 			array_push($this->plugins,$plugin->to_array());
 		}
-		var_dump($this->plugins);
+		// var_dump($this->plugins);
 		$this->execute();
 		$this->config = array(
 			'id'           => 'tgmpa',
