@@ -5955,6 +5955,9 @@ article.articulo.Clients {
   .menu li:hover a {
     text-decoration: underline; }
 
+.current-menu-item a {
+  text-decoration: underline; }
+
 .menu-item {
   display: -webkit-flex;
   display: -ms-flexbox;
