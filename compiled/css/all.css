@@ -6188,7 +6188,8 @@ a img.aligncenter {
   justify-content: center;
   color: #000;
   font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 100; }
+  font-weight: 100;
+  padding: 5em 0; }
 
 .flex-section {
   display: -webkit-flex;
