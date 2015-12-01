@@ -1,0 +1,48 @@
+article.articulo.Form {
+    flex-direction: column;
+}
+
+.Form__title {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 3em;
+    margin-bottom: 1em;
+    color: #FFF;
+}
+input,textarea {
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    background-color: #2d73e3;
+    border: none;
+    box-shadow: 0px 0px 11px -4px;
+    color:White;
+    font-weight:100;
+}
+button {
+    width: 120px;
+    height: 30px;
+    background-color: #2D73E3;
+    border: none;
+    color: white;
+    box-shadow: 1px 1px 10px -3px;
+}
+
+.col-xs-12.button {
+    text-align: center;
+}
+::-webkit-input-placeholder {
+   color: white;
+   font-weight:400;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+:-ms-input-placeholder {  
+   color: white;  
+}

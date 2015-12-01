@@ -1,0 +1,26 @@
+.Clients__title {
+    display: flex;
+    text-align: center;
+}
+
+.Clients__List {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+article.articulo.Clients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Clients__title {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 3em;
+    margin-bottom: 1em;
+    color: #5A94F2;
+}

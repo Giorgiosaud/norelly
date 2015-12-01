@@ -1,0 +1,23 @@
+.Pages__inner-page_inner-title {
+	display: flex;
+	width: 100%;
+	align-items: flex-end;
+	justify-content: center;
+	height: 140px;
+	background: #5a94f2;
+	color: #FFF;
+	font-weight: 100;
+	font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.Pages__inner-page_inner-article{
+	display: flex;
+	width: 80%;
+	margin-left: 10%;
+	padding-top: 3em;
+	font-size:1.2em;
+	align-items: center;
+	justify-content: center;
+	color: #000;
+	font-family: "Open Sans Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 100;
+}

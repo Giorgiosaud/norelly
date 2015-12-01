@@ -1,0 +1,32 @@
+{
+  "name": "Wordpress Theme Base Zonapro",
+  "version": "0.0.1",
+  "homepage": "https://github.com/giorgiosaud/zpwpbasetheme",
+  "authors": [
+    "Giorgiosaud <jorgelsaud@gmail.com>"
+  ],
+  "description": "Tema base de Zonapro.net",
+  "main": ".",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "base",
+    "zonapro"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.5",
+    "open-sans": "~1.1.0",
+    "open-sans-fontface": "~1.4.2"
+  }
+}

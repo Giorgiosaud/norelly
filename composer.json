@@ -1,0 +1,25 @@
+{
+	"name": "jorgelsaud/zonapro-wp",
+	"description": "Tema Base Zonapro para Wordpress",
+	"keywords": [
+	"framework",
+	"wordpress"
+	],
+	"license": "MIT",
+	"type": "project",
+	"require": {"tgmpa/tgm-plugin-activation": "^2.5"},
+	"autoload":{
+		"files": [
+		"app/helpers.php",
+		"app/flex-helpers.php",
+		"app/flexible-custom-fields.php",
+		"app/Customizer/Content/BaseContent.php",
+		"app/Customizer/Sections/BaseSection.php",
+		"app/Customizer/Settings/BaseSetting.php",
+		"app/Customizer/Panels/BasePanel.php"
+		],
+		"psr-4": {
+			"WordpressBase\\": "app/"
+		}
+	}
+}
