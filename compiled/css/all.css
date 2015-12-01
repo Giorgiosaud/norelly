@@ -6171,6 +6171,9 @@ a img.aligncenter {
   display: -ms-flexbox;
   display: flex;
   width: 80%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-left: 10%;
   padding-top: 3em;
   font-size: 1.2em;
