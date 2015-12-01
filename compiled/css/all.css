@@ -6200,6 +6200,8 @@ a img.aligncenter {
   align-items: center; }
 
 .carousel-caption2 {
+  width: 80%;
+  margin-left: 10%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
