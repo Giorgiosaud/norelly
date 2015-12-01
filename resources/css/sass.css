@@ -5918,6 +5918,7 @@ article.articulo.Clients {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  padding: 1em 0;
   z-index: 100; }
 
 .icon-bar {
@@ -5951,10 +5952,8 @@ article.articulo.Clients {
   color: #4a7484;
   width: 80%;
   margin-left: 10%; }
-  .menu li:hover {
-    color: white; }
-    .menu li:hover a {
-      text-decoration: none; }
+  .menu li:hover a {
+    text-decoration: underline; }
 
 .menu-item {
   display: -webkit-flex;
@@ -6253,7 +6252,7 @@ article.articulo {
     -webkit-flex: 2;
     -ms-flex: 2;
     flex: 2;
-    padding: 5%;
+    padding: 0 5%;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 1.4em; }
   article.articulo .imagen-articulo {
