@@ -157,7 +157,7 @@ class Plugin{
 	public function crearPluginDetallado(array $plugin){
 		foreach ($plugin as $key => $value)
 		{
-			$this->$key = $value;
+			// $this->$key = $value;
 			if($key=='source'){
 				$this->source=get_stylesheet_directory().$value;
 			}
