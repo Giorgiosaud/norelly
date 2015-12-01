@@ -14,11 +14,13 @@ class RequestedPlugins{
 	/**
 	 * @var array
      */
-	private $plugins=array(
+    // private $mainsrc=get_stylesheet_directory();
+
+	private $pluginsIncluded=array(
 		array(
 			'name'               => 'Advanced Custom Fields Pro', // The plugin name.
 			'slug'               => 'advanced-custom-fields-pro', // The plugin slug (typically the folder name).
-			'source'             => '/app/Plugins/src/advanced-custom-fields-pro.zip', // The plugin source.
+			'source'             => "/app/Plugins/src/advanced-custom-fields-pro.zip", // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
 			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
@@ -27,7 +29,7 @@ class RequestedPlugins{
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 	);
-
+private $plugins=array();
 	/**
 	 *
      */
@@ -38,6 +40,12 @@ class RequestedPlugins{
 			$plugin->required()->force_activation();
 			array_push($this->plugins,$plugin->to_array());
 		}
+		foreach ($this->pluginsIncluded as $pluginName) {
+			$plugin=new Plugin($pluginName);
+			$plugin->required()->force_activation();
+			array_push($this->plugins,$plugin->to_array());
+		}
+		// var_dump($this->plugins);
 		$this->execute();
 		$this->config = array(
 			'id'           => 'tgmpa',

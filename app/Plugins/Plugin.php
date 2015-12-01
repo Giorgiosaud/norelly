@@ -64,11 +64,18 @@ class Plugin{
 
 		if(is_string($plugin)){
 			$this->name=$plugin;
+			$this->source='';
+			// $this->crearPluginDetallado($plugin);
 			$this->slug=slugify($this->name);
 		}
-		if(is_array($plugin)){
-			$this->crearPluginDetallado($plugin);
+		else{
+			// var_dump($plugin);	
+			$this->name=$plugin['name'];
+			$this->source=get_stylesheet_directory().$plugin['source'];
+			
+			// $this->crearPluginDetallado($plugin);
 		}
+		// var_dump($this);
 	}
 
 	/**
@@ -157,10 +164,10 @@ class Plugin{
 	public function crearPluginDetallado(array $plugin){
 		foreach ($plugin as $key => $value)
 		{
-			// $this->$key = $value;
 			if($key=='source'){
 				$this->source=get_stylesheet_directory().$value;
 			}
+
 
 		}
 	}
