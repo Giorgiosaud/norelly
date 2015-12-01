@@ -60,6 +60,11 @@ $color:#4a7484;
         }
     }
 }
+.current-menu-item{
+    a{
+         text-decoration: underline;
+    }
+}
 .menu-item{
     display:flex;
     display: none;
