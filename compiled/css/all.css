@@ -6173,9 +6173,9 @@ a img.aligncenter {
     margin-left: 20%; } }
 
 .list-item, .List__icon, .List__description {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important; }
 
 .Pages__inner-page_inner-title {
   display: -webkit-flex;
