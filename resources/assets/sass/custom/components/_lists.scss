@@ -1,6 +1,4 @@
-.list-item,.List__icon,.List__description{
-    display: flex;
-}
+
 .List__description{
 	margin-left: 1em;
 }
@@ -24,4 +22,7 @@
 	.list-item{
 		margin-left:20%;
 	}
+}
+.list-item,.List__icon,.List__description{
+    display: flex;
 }
