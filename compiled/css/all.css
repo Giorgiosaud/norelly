@@ -6152,6 +6152,14 @@ a img.aligncenter {
 .socicon {
   font-size: 1.5em; }
 
+.list-item, .List__icon, .List__description {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.List__description {
+  margin-left: 1em; }
+
 .Pages__inner-page_inner-title {
   display: -webkit-flex;
   display: -ms-flexbox;
