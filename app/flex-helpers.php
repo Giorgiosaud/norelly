@@ -131,7 +131,7 @@ if (! function_exists('show_contact_form')) :
                     <textarea required name="message" placeholder="Ingrese su Mensaje" rows="8"></textarea>
                 </div>
                 <div class="col-xs-12 button">
-                    <button type="submit">Send</button>
+                    <button type="submit">Enviar</button>
                 </div>
             </div>
         </form>
