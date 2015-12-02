@@ -6160,6 +6160,23 @@ a img.aligncenter {
 .List__description {
   margin-left: 1em; }
 
+.list-items {
+  -webkit-column-count: 1;
+  text-align: left; }
+
+.list-item {
+  margin-bottom: 1.5em; }
+  .list-item a {
+    color: inherit; }
+
+@media (min-width: 768px) {
+  .list-items {
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-count: 2; }
+  .list-item {
+    margin-left: 20%; } }
+
 .Pages__inner-page_inner-title {
   display: -webkit-flex;
   display: -ms-flexbox;

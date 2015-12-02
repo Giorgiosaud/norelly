@@ -1,7 +1,27 @@
 .list-item,.List__icon,.List__description{
     display: flex;
 }
-
 .List__description{
 	margin-left: 1em;
+}
+.list-items {
+	-webkit-column-count:1;
+	text-align:left;
+}
+
+.list-item {
+	a{
+		color:inherit;
+	}
+	margin-bottom:1.5em;
+}
+
+@media (min-width: 768px) {
+	.list-items {
+		column-count:2;
+		-webkit-column-count:2;
+	}
+	.list-item{
+		margin-left:20%;
+	}
 }
