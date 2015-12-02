@@ -17,52 +17,52 @@ function show_slider()
           <ol class="carousel-indicators">
 
 
-           <?php
+             <?php
 
-           while (have_rows('slide')) : the_row();
+             while (have_rows('slide')) : the_row();
 
 
-           ?>
-           <li data-target="#<?= $id?>" data-slide-to="<?php echo $i;
-            $i++;
-            ?>" class="<?php if ($i==1) {
+             ?>
+             <li data-target="#<?= $id?>" data-slide-to="<?php echo $i;
+                $i++;
+                ?>" class="<?php if ($i==1) {
+                    echo 'active';
+                }
+                ?>"></li>
+                <?php
+                endwhile;
+                $i=0;
+                ?>
+            </ol>
+            <?php 
+            endif;
+            ?>
+            <div class="carousel-inner" role="listbox">
+             <?php
+             while (have_rows('slide')) : the_row();
+             $image = get_sub_field('image');
+             $size='slider';
+             ?>
+             <div class="item <?php if ($i==0) {
                 echo 'active';
             }
-            ?>"></li>
-            <?php
-            endwhile;
-            $i=0;
+            $i++;
+            ?>">
+            <?= wp_get_attachment_image($image, $size);
             ?>
-        </ol>
-        <?php 
-        endif;
-        ?>
-        <div class="carousel-inner" role="listbox">
-           <?php
-           while (have_rows('slide')) : the_row();
-           $image = get_sub_field('image');
-           $size='slider';
-           ?>
-           <div class="item <?php if ($i==0) {
-            echo 'active';
-        }
-        $i++;
-        ?>">
-        <?= wp_get_attachment_image($image, $size);
-        ?>
 
-        <div class="carousel-caption2">
-         <h1 class="tituloSlide"><?php the_sub_field('title')?></h1>
-         <p class="descripcionSlide"><?php the_sub_field('description')?></p>
-         <a href="<?php the_sub_field('link')?>" class="btn btn-default <?php the_sub_field('button_type')?>"><?php the_sub_field('button_text')?></a>
-     </div>
- </div>
- <?php
- endwhile;
- ?>
-</div>
-<?php
-else :
+            <div class="carousel-caption2">
+               <h1 class="tituloSlide"><?php the_sub_field('title')?></h1>
+               <p class="descripcionSlide"><?php the_sub_field('description')?></p>
+               <a href="<?php the_sub_field('link')?>" class="btn btn-default <?php the_sub_field('button_type')?>"><?php the_sub_field('button_text')?></a>
+           </div>
+       </div>
+       <?php
+       endwhile;
+       ?>
+   </div>
+   <?php
+   else :
     echo 'no rows found';
 
 endif;
@@ -116,24 +116,24 @@ if (! function_exists('show_contact_form')) :
             <?php the_sub_field('title')?>
         </div>
         <form action="send_contact" method="POST" accept-charset="utf-8" id="submitContactForm">
-            
-            
-        
-        <div class="Form__content">
-            <div class="col-xs-12 col-md-6">
-                <input required type="text" name="name" value="" placeholder="Insert your Name">
-                <input required type="text" name="last_name" value="" placeholder="Insert your Last Name">
-                <input required type="email" name="email" value="" placeholder="Insert your Email">
-                <input required type="text" name="phone" value="" placeholder="Insert your Phone Number">
-                <input required type="hidden" name="action" id="inputAction" class="form-control" value="send_contact">
+
+
+
+            <div class="Form__content">
+                <div class="col-xs-12 col-md-6">
+                    <input required type="text" name="name" value="" placeholder="Ingrese su Nombre">
+                    <input required type="text" name="last_name" value="" placeholder="Ingrese su Apellido">
+                    <input required type="email" name="email" value="" placeholder="Ingrese su Email">
+                    <input required type="text" name="phone" value="" placeholder="Ingrese su Numero Telefonico">
+                    <input required type="hidden" name="action" id="inputAction" class="form-control" value="send_contact">
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <textarea required name="message" placeholder="Ingrese su Mensaje" rows="8"></textarea>
+                </div>
+                <div class="col-xs-12 button">
+                    <button type="submit">Send</button>
+                </div>
             </div>
-            <div class="col-xs-12 col-md-6">
-            <textarea required name="message" placeholder="Insert your Message" rows="8"></textarea>
-            </div>
-            <div class="col-xs-12 button">
-                <button type="submit">Send</button>
-            </div>
-        </div>
         </form>
     </article>
     <?php
@@ -185,34 +185,49 @@ if (! function_exists('show_two_columns')) :
         function show_list_item()
         {
             $image = get_sub_field('icon');
+            $size='Icono'
             
             ?>
             <div class="list-item">
-             <a href="<?php the_sub_field('link')?>">
-            <span class="socicon socicon-<?=$image?>"></span>
+                <?php
+                if (get_sub_field('link')) {
+                    ?>
+                    <a href="<?php the_sub_field('link')?>">
+                        <?= wp_get_attachment_image($image,$size)?>
+                        <?php the_sub_field('description') ?>
+                    </a>
+                    <?php
+                }
+                else{
+                    ?>
+                    <?= wp_get_attachment_image($image,$size)?>
+                        <?php the_sub_field('description') ?>
+                    <?php
+                }
+                ?>
+
+
+            </div>
+            <?php
+
+        }
+    }
+    if (!function_exists('clients_logos')) {
+        function show_liclients_logosst_item()
+        {
+            $image = get_sub_field('icon');
+            $size='Icono';
+            ?>
+            <div class="list-item">
+               <a href="<?php the_sub_field('link')?>">
+                <?= wp_get_attachment_image($image, $size);
+                ?>
                 <?php the_sub_field('description') ?>
             </a>
         </div>
         <?php
 
     }
-}
-if (!function_exists('clients_logos')) {
-    function show_liclients_logosst_item()
-    {
-        $image = get_sub_field('icon');
-        $size='Icono';
-        ?>
-        <div class="list-item">
-         <a href="<?php the_sub_field('link')?>">
-            <?= wp_get_attachment_image($image, $size);
-            ?>
-            <?php the_sub_field('description') ?>
-        </a>
-    </div>
-    <?php
-
-}
 }
 
 
@@ -247,8 +262,8 @@ if (!function_exists('show_list_clients')) {
         $size='full';
         ?>
         <div class="Clients__logo">
-           <a href="<?php 
-           if(get_sub_field('link')){
+         <a href="<?php 
+         if(get_sub_field('link')){
             the_sub_field('link');
         }
         else{
