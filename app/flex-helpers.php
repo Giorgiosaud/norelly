@@ -193,15 +193,22 @@ if (! function_exists('show_two_columns')) :
                 if (get_sub_field('link')) {
                     ?>
                     <a href="<?php the_sub_field('link')?>">
+                    <div class="List__icon">
                         <?= wp_get_attachment_image($image,$size)?>
+                        </div>
+                        <div class="List__description">
                         <?php the_sub_field('description') ?>
+                        </div>
                     </a>
                     <?php
                 }
                 else{
-                    ?>
+                    ?><div class="List__icon">
                     <?= wp_get_attachment_image($image,$size)?>
+                    </div>
+                    <div class="List__description">
                     <?php the_sub_field('description') ?>
+                    </div>
                     <?php
                 }
                 ?>
