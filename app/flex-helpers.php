@@ -17,52 +17,52 @@ function show_slider()
           <ol class="carousel-indicators">
 
 
-             <?php
+           <?php
 
-             while (have_rows('slide')) : the_row();
+           while (have_rows('slide')) : the_row();
 
 
-             ?>
-             <li data-target="#<?= $id?>" data-slide-to="<?php echo $i;
-                $i++;
-                ?>" class="<?php if ($i==1) {
-                    echo 'active';
-                }
-                ?>"></li>
-                <?php
-                endwhile;
-                $i=0;
-                ?>
-            </ol>
-            <?php 
-            endif;
-            ?>
-            <div class="carousel-inner" role="listbox">
-             <?php
-             while (have_rows('slide')) : the_row();
-             $image = get_sub_field('image');
-             $size='slider';
-             ?>
-             <div class="item <?php if ($i==0) {
+           ?>
+           <li data-target="#<?= $id?>" data-slide-to="<?php echo $i;
+            $i++;
+            ?>" class="<?php if ($i==1) {
                 echo 'active';
             }
-            $i++;
-            ?>">
-            <?= wp_get_attachment_image($image, $size);
+            ?>"></li>
+            <?php
+            endwhile;
+            $i=0;
             ?>
+        </ol>
+        <?php 
+        endif;
+        ?>
+        <div class="carousel-inner" role="listbox">
+           <?php
+           while (have_rows('slide')) : the_row();
+           $image = get_sub_field('image');
+           $size='slider';
+           ?>
+           <div class="item <?php if ($i==0) {
+            echo 'active';
+        }
+        $i++;
+        ?>">
+        <?= wp_get_attachment_image($image, $size);
+        ?>
 
-            <div class="carousel-caption2">
-               <h1 class="tituloSlide"><?php the_sub_field('title')?></h1>
-               <p class="descripcionSlide"><?php the_sub_field('description')?></p>
-               <a href="<?php the_sub_field('link')?>" class="btn btn-default <?php the_sub_field('button_type')?>"><?php the_sub_field('button_text')?></a>
-           </div>
-       </div>
-       <?php
-       endwhile;
-       ?>
-   </div>
-   <?php
-   else :
+        <div class="carousel-caption2">
+         <h1 class="tituloSlide"><?php the_sub_field('title')?></h1>
+         <p class="descripcionSlide"><?php the_sub_field('description')?></p>
+         <a href="<?php the_sub_field('link')?>" class="btn btn-default <?php the_sub_field('button_type')?>"><?php the_sub_field('button_text')?></a>
+     </div>
+ </div>
+ <?php
+ endwhile;
+ ?>
+</div>
+<?php
+else :
     echo 'no rows found';
 
 endif;
@@ -185,7 +185,7 @@ if (! function_exists('show_two_columns')) :
         function show_list_item()
         {
             $image = get_sub_field('icon');
-            $size='Icono'
+            $size='IconoLista';
             
             ?>
             <div class="list-item">
@@ -201,7 +201,7 @@ if (! function_exists('show_two_columns')) :
                 else{
                     ?>
                     <?= wp_get_attachment_image($image,$size)?>
-                        <?php the_sub_field('description') ?>
+                    <?php the_sub_field('description') ?>
                     <?php
                 }
                 ?>
@@ -219,7 +219,7 @@ if (! function_exists('show_two_columns')) :
             $size='Icono';
             ?>
             <div class="list-item">
-               <a href="<?php the_sub_field('link')?>">
+             <a href="<?php the_sub_field('link')?>">
                 <?= wp_get_attachment_image($image, $size);
                 ?>
                 <?php the_sub_field('description') ?>
@@ -262,8 +262,8 @@ if (!function_exists('show_list_clients')) {
         $size='full';
         ?>
         <div class="Clients__logo">
-         <a href="<?php 
-         if(get_sub_field('link')){
+           <a href="<?php 
+           if(get_sub_field('link')){
             the_sub_field('link');
         }
         else{

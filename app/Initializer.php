@@ -94,6 +94,12 @@ class Initializer{
         		'XWidth'=>45,
         		'YWidth'=>45,
         		'crop'=>false
+        		),
+        	array(
+        		'name'=>'IconoLista',
+        		'XWidth'=>25,
+        		'YWidth'=>25,
+        		'crop'=>false
         		)
 
         	)
