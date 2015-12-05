@@ -34,6 +34,7 @@
 	.descripcionSlide{
 		font-family: 'Open Sans Condensed', sans-serif;
 		font-size: 1.4em;
+		display: none;
 	}
 	.btn{
 		font-style: 1em;
@@ -97,6 +98,9 @@ article.articulo {
 	article.articulo {
 		width: 80%;
 		flex-direction:row;
+	}
+	.descripcionSlide{
+		display: block;
 	}
 }
 footer {
