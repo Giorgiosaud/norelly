@@ -6257,7 +6257,10 @@ a img.aligncenter {
     font-size: 4em; }
   .carousel-caption2 .descripcionSlide {
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 1.4em; }
+    font-size: 1.4em;
+    display: none; }
+  .carousel-caption2 .btn {
+    font-style: 1em; }
 
 article.articulo {
   display: -webkit-flex;
@@ -6325,7 +6328,9 @@ article.articulo {
     width: 80%;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
-    flex-direction: row; } }
+    flex-direction: row; }
+  .descripcionSlide {
+    display: block; } }
 
 footer {
   display: -webkit-flex;
@@ -6356,8 +6361,5 @@ footer {
   align-items: center;
   background-color: #ce1b20;
   height: 1em; }
-
-body {
-  font-size: 100%; }
 
 /*# sourceMappingURL=sass.css.map */
