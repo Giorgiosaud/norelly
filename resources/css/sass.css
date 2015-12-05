@@ -6329,7 +6329,7 @@ article.articulo {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row; }
-  .descripcionSlide {
+  .carousel-caption2 .descripcionSlide {
     display: block; } }
 
 footer {

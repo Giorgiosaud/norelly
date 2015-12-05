@@ -99,8 +99,10 @@ article.articulo {
 		width: 80%;
 		flex-direction:row;
 	}
-	.descripcionSlide{
-		display: block;
+	.carousel-caption2{
+		.descripcionSlide{
+			display: block;
+		}
 	}
 }
 footer {
