@@ -53,7 +53,7 @@ function show_slider()
 
         <div class="carousel-caption2">
          <h1 class="tituloSlide"><?php the_sub_field('title')?></h1>
-         <p class="descripcionSlide"><?php the_sub_field('description')?></p>
+         <div class="descripcionSlide"><?php the_sub_field('description')?></div>
          <a href="<?php the_sub_field('link')?>" class="btn btn-default <?php the_sub_field('button_type')?>"><?php the_sub_field('button_text')?></a>
      </div>
  </div>
