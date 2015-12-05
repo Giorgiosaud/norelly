@@ -6177,6 +6177,46 @@ a img.aligncenter {
   display: -ms-flexbox !important;
   display: flex !important; }
 
+.carousel-caption2 {
+  width: 80%;
+  margin-left: 10%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  padding: 2em;
+  text-align: center; }
+  .carousel-caption2 .tituloSlide {
+    font-weight: 800;
+    font-size: 2em; }
+  .carousel-caption2 .descripcionSlide {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.4em;
+    display: none; }
+  .carousel-caption2 .btn {
+    font-style: 1em; }
+
+@media (min-width: 768px) {
+  .carousel-caption2 .descripcionSlide {
+    display: block; }
+  .carousel-caption2 .tituloSlide {
+    font-size: 4em; } }
+
 .Pages__inner-page_inner-title {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6227,40 +6267,6 @@ a img.aligncenter {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
-
-.carousel-caption2 {
-  width: 80%;
-  margin-left: 10%;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  z-index: 100;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  color: white;
-  padding: 2em;
-  text-align: center; }
-  .carousel-caption2 .tituloSlide {
-    font-weight: 800;
-    font-size: 4em; }
-  .carousel-caption2 .descripcionSlide {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 1.4em;
-    display: none; }
-  .carousel-caption2 .btn {
-    font-style: 1em; }
 
 article.articulo {
   display: -webkit-flex;
@@ -6328,9 +6334,7 @@ article.articulo {
     width: 80%;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
-    flex-direction: row; }
-  .carousel-caption2 .descripcionSlide {
-    display: block; } }
+    flex-direction: row; } }
 
 footer {
   display: -webkit-flex;
