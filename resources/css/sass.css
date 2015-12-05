@@ -6209,7 +6209,8 @@ a img.aligncenter {
     font-size: 1.4em;
     display: none; }
   .carousel-caption2 .btn {
-    font-style: 1em; }
+    font-size: 1em;
+    box-sizing: content-box; }
 
 @media (min-width: 768px) {
   .carousel-caption2 .descripcionSlide {
